@@ -5,7 +5,7 @@ using Mono.Cecil;
 using Mono.Cecil.Cil;
 using Mono.Collections.Generic;
 
-namespace TemplateModPatcher {
+namespace NoKnockouts {
     public static class Helper {
         /**
          * <summary>
