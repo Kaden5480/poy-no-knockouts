@@ -14,6 +14,7 @@ mod which disables the knockout animation in normal mode.
 - [Building from source](#building-from-source)
     - [Dotnet](#dotnet-build)
     - [Visual Studio](#visual-studio-build)
+    - [Custom game locations](#custom-game-locations)
 
 # Installing
 ## BepInEx
@@ -31,8 +32,8 @@ mod which disables the knockout animation in normal mode.
 ### Installing this mod
 - Download the latest BepInEx release
 [here](https://github.com/Kaden5480/poy-no-knockouts/releases).
-- The compressed zip will contain a `patchers` directory.
-- Copy the files in `patchers` to `BepInEx/patchers` in your game directory.
+- The compressed zip will contain a `plugins` directory.
+- Copy the files in `plugins` to `BepInEx/plugins` in your game directory.
 
 ## MelonLoader
 ### MLPatcherPlugin
@@ -42,8 +43,8 @@ https://github.com/Kaden5480/ml-patcher-plugin
 ### This mod
 - Download the latest release
 [here](https://github.com/Kaden5480/poy-no-knockouts/releases).
-- The compressed zip file will contain a `Plugins` directory.
-- Copy the files from `Plugins` to `Plugins` in your game directory.
+- The compressed zip file will contain a `Mods` directory.
+- Copy the files from `Mods` to `Mods` in your game directory.
 
 # Building from source
 Whichever approach you use for building from source, the resulting
@@ -65,3 +66,19 @@ dotnet build -c <configuration>
 ## Visual Studio build
 To build with Visual Studio, open NoKnockouts.sln and build by pressing ctrl + shift + b,
 or by selecting Build -> Build Solution.
+
+## Custom game locations
+If you installed Peaks of Yore in a custom game location, you may require
+an extra file to configure the build so it knows where to find the Peaks of Yore game
+libraries.
+
+The file must be in the root of this repository and must be called "GamePath.props".
+
+Below gives an example where Peaks of Yore is installed on the F drive:
+```xml
+<Project>
+  <PropertyGroup>
+    <GamePath>F:\Games\Peaks of Yore</GamePath>
+  </PropertyGroup>
+</Project>
+```
