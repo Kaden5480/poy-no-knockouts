@@ -15,7 +15,7 @@ namespace NoKnockouts {
          * </summary>
          */
         public void Awake() {
-            Harmony.CreateAndPatchAll(this.GetType());
+            Harmony.CreateAndPatchAll(typeof(PatchKnockout));
         }
 
 #elif MELONLOADER
@@ -38,15 +38,17 @@ namespace NoKnockouts {
          * </summary>
          */
         [HarmonyPatch(typeof(FallingEvent), "FellToDeath")]
-        [HarmonyPrefix]
-        static bool PatchKnockout() {
-            if (GameManager.control.permaDeathEnabled || GameManager.control.freesoloEnabled) {
+        static class PatchKnockout {
+            static bool Prefix(FallingEvent __instance) {
+                if (GameManager.control.permaDeathEnabled || GameManager.control.freesoloEnabled) {
+                    return true;
+                }
+
+                __instance.HurtSound();
                 FallingEvent.fallenToDeath = false;
-                return true;
+
+                return false;
             }
-
-            return false;
         }
-
     }
 }
