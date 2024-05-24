@@ -40,7 +40,7 @@ namespace NoKnockouts {
         [HarmonyPatch(typeof(FallingEvent), "FellToDeath")]
         [HarmonyPrefix]
         static bool PatchKnockout() {
-            if (GameManager.control.permaDeathEnabled || GameManager.control.freeSoloEnabled) {
+            if (GameManager.control.permaDeathEnabled || GameManager.control.freesoloEnabled) {
                 FallingEvent.fallenToDeath = false;
                 return true;
             }
