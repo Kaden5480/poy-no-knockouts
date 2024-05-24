@@ -5,7 +5,6 @@ using HarmonyLib;
 using BepInEx;
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace NoKnockouts {
     [BepInPlugin("com.github.Kaden5480.poy-no-knockouts", "NoKnockouts", PluginInfo.PLUGIN_VERSION)]
@@ -33,7 +32,12 @@ namespace NoKnockouts {
 
 #endif
 
-        [HarmonyPath(typeof(FallingEvent), "FellToDeath")]
+        /**
+         * <summary>
+         * Patches the knockout animation out in normal mode.
+         * </summary>
+         */
+        [HarmonyPatch(typeof(FallingEvent), "FellToDeath")]
         [HarmonyPrefix]
         static bool PatchKnockout() {
             if (GameManager.control.permaDeathEnabled || GameManager.control.freeSoloEnabled) {
