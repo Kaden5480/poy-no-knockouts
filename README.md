@@ -19,7 +19,7 @@ mod which disables the knockout animation in normal mode.
 # Installing
 ## BepInEx
 If you haven't installed BepInEx yet, follow the install instructions
-[here](https://github.com/Kaden5480/modloader-instructions#bepinex)
+[here](https://github.com/Kaden5480/modloader-instructions#bepinex).
 
 ### No knockouts
 - Download the latest BepInEx release
