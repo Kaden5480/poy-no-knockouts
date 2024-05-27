@@ -1,7 +1,7 @@
 == MelonLoader ==
 If you haven't installed MelonLoader yet, follow the instructions here:
-Windows: https://github.com/Kaden5480/poy-no-knockouts#melonloader-windows
-Linux:   https://github.com/Kaden5480/poy-no-knockouts#melonloader-linux
+Windows: https://github.com/Kaden5480/modloader-instructions#melonloader-windows
+Linux:   https://github.com/Kaden5480/modloader-instructions#melonloader-linux
 
 == No Knockouts ==
 Find the Peaks of Yore game directory, this is most easily done

@@ -1,6 +1,6 @@
 == BepInEx ==
 If you haven't installed BepInEx yet, follow the instructions here:
-https://github.com/Kaden5480/poy-no-knockouts#bepinex
+https://github.com/Kaden5480/modloader-instructions#bepinex
 
 == No Knockouts ==
 Find the Peaks of Yore game directory, this is most easily done
