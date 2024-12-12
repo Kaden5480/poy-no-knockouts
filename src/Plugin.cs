@@ -24,7 +24,7 @@ using MelonLoader;
 
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(NoKnockouts.Plugin), "NoKnockouts", "0.1.0", "Kaden5480")]
+[assembly: MelonInfo(typeof(NoKnockouts.Plugin), "NoKnockouts", PluginInfo.PLUGIN_VERSION, "Kaden5480")]
 [assembly: MelonGame("TraipseWare", "Peaks of Yore")]
 
 namespace NoKnockouts {
