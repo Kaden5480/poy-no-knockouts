@@ -45,6 +45,11 @@ namespace NoKnockouts {
                 }
 
                 __instance.HurtSound();
+
+                __instance.falls++;
+                GameManager.control.fallTimes++;
+                GameManager.control.global_stats_falls++;
+
                 FallingEvent.fallenToDeath = false;
 
                 return false;
