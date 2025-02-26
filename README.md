@@ -7,6 +7,8 @@ A
 [Peaks of Yore](https://store.steampowered.com/app/2236070/).
 mod which disables the knockout animation in normal mode.
 
+![No Knockouts Demo](assets/demo.gif)
+
 # Overview
 - [Installing](#installing)
     - [BepInEx](#bepinex)
